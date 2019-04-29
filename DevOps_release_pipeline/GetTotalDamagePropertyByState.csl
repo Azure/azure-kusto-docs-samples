@@ -1,0 +1,7 @@
+//Create GetTotalDamagePropertyByState function to return Total Damanged Property by State
+.create-or-alter function GetTotalDamagePropertyByState()
+{
+StormEvents
+| summarize sum(DamageProperty) by State
+| order by sum_DamageProperty desc 
+};
